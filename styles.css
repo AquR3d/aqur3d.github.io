@@ -1,0 +1,110 @@
+/* styling specificity
+    1. inline (priority)
+    2. id
+    3. class
+    4. type (least priority)
+
+    css selectors
+
+    a, b
+    a c     descendant (children children children whatever if its inside it lol)
+    a > b > ... > c  immediate child
+    a + b   adj sibling
+    [a=b]   attribute
+    a:b     pseudoclass
+    a::b    pseudoelement
+
+    mmm media quieries and viewports
+
+    bootstrap, a popular css library getbootstrap.com (uses 12 unit columns)
+    
+    class="row"
+        class="col-12"
+
+        or
+
+        class="col-lg-6 col-sm-12"
+        class="col-lg-6 col-sm-12"
+
+    SAS = extension/diff language to CSS
+    * has variables
+    * .scss
+*/
+
+@media (min-width: 700px) {
+    body {
+        background-color: white;
+    }
+}
+
+@media (max-width: 699px) {
+    body {
+        background-color: red;
+    }
+}
+
+/*
+#id {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+#id {
+    display: grid;
+    grid-column-gap: __px;
+    grid-row-gap: __px;
+    grid-template-columns: ___px ___px ... auto; per column
+}
+*/
+
+button {
+    width: 200px;
+    height: 50px;
+    font-size: 24px;
+}
+
+button:hover {
+    background-color: yellow;
+}
+
+a[href="lexie.html"] {
+    color: pink;
+}
+
+ul > li {
+    color: blue;
+}
+
+li {
+    color: green;
+}
+
+div {
+    border: 3px solid black;
+    background-color: rgb(255, 199, 154);
+    width: 400px;
+    height: 300px;
+    padding: 20px;
+    font-family: Courier, sans-serif;
+    font-size: 10px;
+}
+
+table {
+    border: 1px solid black;
+    border-collapse: collapse;
+}
+
+td, th {
+    border: 1px solid black;
+    padding: 5px;
+    /*margin goes around the border */
+}
+
+#foo { /* ids can/should only be put on ONE html element*/
+    color: rgb(170, 54, 0);
+}
+
+.bar {
+    font-weight: bolder;
+    font-size: 100px;
+}
